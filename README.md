@@ -2,7 +2,7 @@
 A resource for NLP research with Urdu.
 
 ## Dataset
-Urdu is very low resource language for NLP, as there are very limited resources of significant, high quality text data. I have attempted to collect a diverse, high quality corpus of text for training embeddings and language models. This includes compiling a new corpus of Urdu short stories, extracting data from Wikipedia Urdu (https://dumps.wikimedia.org/urwiki), and collecting other available sources of Urdu text prepared and provided by other researchers, such as Makhzan (https://github.com/zeerakahmed/makhzan). The entire corpus was cleaned and processed to ensure data quality. I intend on continuing to expanding this corpus, and plan on extracting text from the Urdu portion of CommonCrawl next.
+Urdu is very low resource language for NLP, as there are very limited resources of significant, high quality text data. I have attempted to collect a diverse, high quality corpus of text for training embeddings and language models. This includes compiling a new corpus of Urdu short stories, extracting data from [Wikipedia Urdu](https://dumps.wikimedia.org/urwiki), and collecting other available sources of Urdu text prepared and provided by other researchers, such as [Makhzan](https://github.com/zeerakahmed/makhzan). The entire corpus was cleaned and processed to ensure data quality. I intend on continuing to expanding this corpus, and plan on extracting text from the Urdu portion of CommonCrawl next.
 
 ## Emebddings
 Word Embeddings have become an ubiquitous component of NLP systems. This repostory releases pre-trained Word2Vec and FastText embeddings for multiple vector dimensions. These embeddings are provided in the form of trained Gensim models, and json files.
