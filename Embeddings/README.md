@@ -2,7 +2,7 @@ Word Embeddings have experienced a tremendous improvements over the last decade,
 
 For most languages, such Pre-trained embeddings are readily available, but as with other low-resource languages, Urdu has very limited resources for researchers and practioners looking to download and use Pre-trained embeddings. This repository makes available Pre-trained Word2Vec and FastText word embeddings for various dimensions, in the form of trained Gensim models, and json files. 
 
-[`Word2Vec.ipynb`] noteboook also provides a brief guide to building Word2Vec with SkipGram embeddings.
+`Word2Vec.ipynb` noteboook also provides a brief guide to building Word2Vec with SkipGram embeddings.
 
 ### Word2Vec
 
