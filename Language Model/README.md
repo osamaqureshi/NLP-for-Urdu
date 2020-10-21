@@ -1,0 +1,3 @@
+[Language Models](https://en.wikipedia.org/wiki/Language_model) (LM) have proved to be tremendously powerful in improving the performance of NLP systems across a broad range of tasks. Pre-trained LMs are employed as feature extractors, a prime example of Transfer Learning, in the same manners as Convolutional Neural Networks are used with Computer Vision systems.
+
+This repository aims to train and release pre-trained Language Models based on different powerful models introduced over the last few years, such as ELMo, BERT, GPT etc, with the hope that it can serve as a helpful resource of NLP researchers and practioners working with Urdu NLP systems. 
