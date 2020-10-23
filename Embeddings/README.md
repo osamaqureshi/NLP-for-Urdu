@@ -17,7 +17,7 @@ For most languages, such Pre-trained embeddings are readily available, but as wi
 ```python
 from gensim.models import Word2Vec
 EMBEDDING_PATH = '../word2vec256.bin'
-model =. Word2Vec.load(EMBEDDING_PATH)  
+model = Word2Vec.load(EMBEDDING_PATH)  
 ```
 
 ### FastText
@@ -32,5 +32,5 @@ model =. Word2Vec.load(EMBEDDING_PATH)
 ```python
 from gensim.models import FastText
 EMBEDDING_PATH = '../fasttext256.bin'
-model =. FastText.load(EMBEDDING_PATH)  
+model = FastText.load(EMBEDDING_PATH)  
 ```
