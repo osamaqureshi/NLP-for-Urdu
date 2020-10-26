@@ -34,8 +34,7 @@ class BiRNN(tf.keras.Model):
         self.Layers = [Bidirectional(units=self.units, projection_units=self.projection_units),
                        tf.keras.layers.Add(),
                        Bidirectional(units=self.units, projection_units=self.projection_units),
-                       tf.keras.layers.Dense(self.vocab_size, name='dense'),
-                       tf.keras.layers.Softmax(name='softmax')]
+                       tf.keras.layers.Dense(self.vocab_size, activation='softmax', name='softmax')]
 
     def call(self, inp, predict=False):
         inp = self.embeddings(inp)
@@ -46,8 +45,7 @@ class BiRNN(tf.keras.Model):
             return out3
         else:
             out4 = self.Layers[3](out3)
-            out5 = self.Layers[4](out4)
-            return out5
+            return out4
 
 def loss_function(real, pred, loss_object):
     mask = tf.math.logical_not(tf.math.equal(real, 0))

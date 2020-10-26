@@ -53,7 +53,7 @@ UNITS = 256
 EMBEDDING_DIM = 256
 PROJECTION_UNITS = 256
 BUFFER_SIZE = 10000
-CORPUS_PATH = 'data/makhzan.txt'
+CORPUS_PATH = 'data/corpus.txt'
 EMBEDDING_PATH = 'data/word2vec256.bin'
 CHECKPOINT_PATH = 'checkpoints'
 LOG_DIR = 'logs'
@@ -103,11 +103,10 @@ birnn = BiRNN(UNITS, PROJECTION_UNITS, MAX_SEQ_LEN, vocab_size, EMBEDDING_DIM, e
 optimizer = tf.keras.optimizers.Adam()
 loss_object = tf.keras.losses.SparseCategoricalCrossentropy()
 
-tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=LOG_DIR, histogram_freq=1)
 train_loss = tf.keras.metrics.Mean('train_loss', dtype=tf.float32)
-
 ckpt = tf.train.Checkpoint(birnn=birnn)
 ckpt_manager = tf.train.CheckpointManager(ckpt, CHECKPOINT_PATH, max_to_keep=2)
+train_summary_writer = tf.summary.create_file_writer(LOG_DIR)
 
 # if a checkpoint exists, restore the latest checkpoint.
 if ckpt_manager.latest_checkpoint:
