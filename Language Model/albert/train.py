@@ -139,7 +139,7 @@ for epoch in range(EPOCHS):
     for i, batch in enumerate(test):
         total_loss += test_step(batch)
         if i % 100 == 0:
-            print('Epoch {} Batch {} Test Loss {:.4f}'.format(epoch + 1, i, train_loss.result()))
+            print('Epoch {} Batch {} Test Loss {:.4f}'.format(epoch + 1, i, test_loss.result()))
 
     with test_summary_writer.as_default():
         tf.summary.scalar('test loss', test_loss.result(), step=epoch)
